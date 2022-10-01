@@ -21,10 +21,10 @@
     "name": "LudumDare51",
     "description": "",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1080,
+    "windowHeight": 720,
     "latestCompilationDirectory": "",
-    "maxFPS": 60,
+    "maxFPS": 0,
     "minFPS": 20,
     "verticalSync": false,
     "platformSpecificAssets": {},
@@ -59,12 +59,30 @@
     "resources": [
       {
         "alwaysLoaded": false,
+        "file": "Assets/Art/environment/ground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\environment\\ground.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/Player/gunL.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\Player\\gunL.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
         "file": "Assets/Art/Player/player1.png",
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Art\\Player\\player1.png",
         "smoothed": false,
-        "userAdded": false
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -73,7 +91,7 @@
         "metadata": "",
         "name": "Assets\\Art\\Player\\player2.png",
         "smoothed": false,
-        "userAdded": false
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -82,7 +100,7 @@
         "metadata": "",
         "name": "Assets\\Art\\Player\\player3.png",
         "smoothed": false,
-        "userAdded": false
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
@@ -91,14 +109,14 @@
         "metadata": "",
         "name": "Assets\\Art\\Player\\player4.png",
         "smoothed": false,
-        "userAdded": false
+        "userAdded": true
       },
       {
         "alwaysLoaded": false,
-        "file": "Assets/Art/environment/ground.png",
+        "file": "Assets/Art/Player/gun.png",
         "kind": "image",
         "metadata": "",
-        "name": "Assets\\Art\\environment\\ground.png",
+        "name": "Assets\\Art\\Player\\gun.png",
         "smoothed": false,
         "userAdded": false
       }
@@ -132,7 +150,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 2.8400000000000016,
+        "zoomFactor": 2.4500000000000033,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -146,9 +164,9 @@
           "name": "Player",
           "persistentUuid": "cf2a077b-7dfb-4207-81e6-09a3813ffa6d",
           "width": 147,
-          "x": 330,
-          "y": 215,
-          "zOrder": 1,
+          "x": 0,
+          "y": 0,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -156,14 +174,104 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 724,
+          "height": 5855,
           "layer": "",
           "name": "grass",
           "persistentUuid": "6b0e1a25-b9cd-4ba5-9ae5-70d36cc7a595",
-          "width": 928,
-          "x": -39,
-          "y": -94,
+          "width": 7669,
+          "x": -4062,
+          "y": -2336,
           "zOrder": -2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "wall",
+          "persistentUuid": "886ac609-865c-4919-ad12-e908e8988760",
+          "width": 5400,
+          "x": -2700,
+          "y": 2364,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 32,
+          "layer": "",
+          "name": "wall",
+          "persistentUuid": "35393618-d0db-4e04-a3f7-4729ac3698f9",
+          "width": 5400,
+          "x": -2700,
+          "y": -1396,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 3792,
+          "layer": "",
+          "name": "wall",
+          "persistentUuid": "475758b2-a5ec-4b10-8fa3-bfadaa17c653",
+          "width": 32,
+          "x": -2700,
+          "y": -1396,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 3792,
+          "layer": "",
+          "name": "wall",
+          "persistentUuid": "bca74258-786f-4793-ac82-d52172516664",
+          "width": 32,
+          "x": 2700,
+          "y": -1396,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 51,
+          "layer": "",
+          "name": "GunR",
+          "persistentUuid": "8432086f-b427-421b-8af1-08196779fffa",
+          "width": 51,
+          "x": 73,
+          "y": 0,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 51,
+          "layer": "",
+          "name": "GunL",
+          "persistentUuid": "602b8781-bf87-479b-8ab0-6f6798812511",
+          "width": 51,
+          "x": 26,
+          "y": -2,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -179,6 +287,29 @@
           "variables": [],
           "effects": [],
           "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": true,
+              "canSleep": false,
+              "shape": "Box",
+              "shapeDimensionA": 32,
+              "shapeDimensionB": 12,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": -1,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0,
+              "restitution": 0,
+              "linearDamping": 0,
+              "angularDamping": 0,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            },
             {
               "name": "PointToMouse",
               "type": "PointToMouse::PointToMouse",
@@ -262,7 +393,7 @@
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\Player\\player1.png",
                       "points": [],
                       "originPoint": {
@@ -276,7 +407,42 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20.700000762939453,
+                            "y": 13.350000381469727
+                          },
+                          {
+                            "x": 26.200000762939453,
+                            "y": 14.350000381469727
+                          },
+                          {
+                            "x": 26,
+                            "y": 18.850000381469727
+                          },
+                          {
+                            "x": 15.5,
+                            "y": 21.149999618530273
+                          },
+                          {
+                            "x": 5.199999809265137,
+                            "y": 18.450000762939453
+                          },
+                          {
+                            "x": 5.099999904632568,
+                            "y": 14.449999809265137
+                          },
+                          {
+                            "x": 10.199999809265137,
+                            "y": 13.25
+                          },
+                          {
+                            "x": 15.699999809265137,
+                            "y": 12.550000190734863
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -291,7 +457,7 @@
                   "timeBetweenFrames": 0.125,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\Player\\player1.png",
                       "points": [],
                       "originPoint": {
@@ -305,10 +471,45 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20.700000762939453,
+                            "y": 13.350000381469727
+                          },
+                          {
+                            "x": 26.200000762939453,
+                            "y": 14.350000381469727
+                          },
+                          {
+                            "x": 26,
+                            "y": 18.850000381469727
+                          },
+                          {
+                            "x": 15.5,
+                            "y": 21.149999618530273
+                          },
+                          {
+                            "x": 5.199999809265137,
+                            "y": 18.450000762939453
+                          },
+                          {
+                            "x": 5.099999904632568,
+                            "y": 14.449999809265137
+                          },
+                          {
+                            "x": 10.199999809265137,
+                            "y": 13.25
+                          },
+                          {
+                            "x": 15.699999809265137,
+                            "y": 12.550000190734863
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\Player\\player2.png",
                       "points": [],
                       "originPoint": {
@@ -322,10 +523,45 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 24,
+                            "y": 13.75
+                          },
+                          {
+                            "x": 26.299999237060547,
+                            "y": 13.850000381469727
+                          },
+                          {
+                            "x": 26.399999618530273,
+                            "y": 20.549999237060547
+                          },
+                          {
+                            "x": 15.5,
+                            "y": 21.149999618530273
+                          },
+                          {
+                            "x": 5.199999809265137,
+                            "y": 18.450000762939453
+                          },
+                          {
+                            "x": 5.099999904632568,
+                            "y": 14.449999809265137
+                          },
+                          {
+                            "x": 11.5,
+                            "y": 9.350000381469727
+                          },
+                          {
+                            "x": 21.700000762939453,
+                            "y": 14.149999618530273
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\Player\\player3.png",
                       "points": [],
                       "originPoint": {
@@ -339,11 +575,170 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20.700000762939453,
+                            "y": 13.350000381469727
+                          },
+                          {
+                            "x": 26.200000762939453,
+                            "y": 14.350000381469727
+                          },
+                          {
+                            "x": 26,
+                            "y": 18.850000381469727
+                          },
+                          {
+                            "x": 15.5,
+                            "y": 21.149999618530273
+                          },
+                          {
+                            "x": 5.199999809265137,
+                            "y": 18.450000762939453
+                          },
+                          {
+                            "x": 5.099999904632568,
+                            "y": 14.449999809265137
+                          },
+                          {
+                            "x": 10.199999809265137,
+                            "y": 13.25
+                          },
+                          {
+                            "x": 15.699999809265137,
+                            "y": 12.550000190734863
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\Player\\player4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19.799999237060547,
+                            "y": 9.350000381469727
+                          },
+                          {
+                            "x": 26.200000762939453,
+                            "y": 14.350000381469727
+                          },
+                          {
+                            "x": 25.100000381469727,
+                            "y": 17.649999618530273
+                          },
+                          {
+                            "x": 17.100000381469727,
+                            "y": 20.75
+                          },
+                          {
+                            "x": 5.400000095367432,
+                            "y": 20.850000381469727
+                          },
+                          {
+                            "x": 5.300000190734863,
+                            "y": 14.050000190734863
+                          },
+                          {
+                            "x": 7.099999904632568,
+                            "y": 13.25
+                          },
+                          {
+                            "x": 10.100000381469727,
+                            "y": 14.050000190734863
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "grass",
+          "tags": "",
+          "texture": "Assets\\Art\\environment\\ground.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "wall",
+          "tags": "",
+          "texture": "Assets\\Art\\environment\\ground.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Static",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 1,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 0.1,
+              "angularDamping": 0.1,
+              "gravityScale": 1,
+              "layers": 1,
+              "masks": 1
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "GunR",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "gun",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\Player\\gun.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -366,15 +761,44 @@
         },
         {
           "assetStoreId": "",
-          "height": 32,
-          "name": "grass",
+          "name": "GunL",
           "tags": "",
-          "texture": "Assets\\Art\\environment\\ground.png",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
+          "type": "Sprite",
+          "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": []
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "gun",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\Player\\gunL.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -434,7 +858,50 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "GunR",
+                "Player",
+                "40",
+                "Player.Angle()-50"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "GunR",
+                "=",
+                "Player.Angle()-5"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreAutour"
+              },
+              "parameters": [
+                "GunL",
+                "Player",
+                "40",
+                "Player.Angle()-130"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "GunL",
+                "=",
+                "Player.Angle()+5"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -462,6 +929,14 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 9.8,
+          "scaleX": 100,
+          "scaleY": 100
+        },
         {
           "name": "PointToMouse",
           "type": "PointToMouse::PointToMouse"
@@ -6292,6 +6767,86 @@
               "extraInformation": [],
               "hidden": false,
               "name": "Offset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "author": "",
+      "category": "",
+      "description": "",
+      "extensionNamespace": "",
+      "fullName": "",
+      "helpPath": "",
+      "iconUrl": "",
+      "name": "UntitledExtension2",
+      "previewIconUrl": "",
+      "shortDescription": "",
+      "version": "",
+      "tags": [],
+      "authorIds": [],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "",
+          "fullName": "",
+          "name": "DualGunSetup",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "UntitledExtension2::DualGunSetup",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Behavior",
+              "label": "",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "TopDownMovementBehavior::TopDownMovementBehavior"
+              ],
+              "hidden": false,
+              "name": "Property"
             }
           ]
         }
