@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Menu",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -18,12 +18,12 @@
     "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "LudumDare51",
+    "name": "Cold Blooded Frogicide",
     "description": "",
     "author": "",
     "windowWidth": 1080,
     "windowHeight": 720,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "C:\\Users\\ripti\\Documents\\GDevelop projects\\Builds\\ColdBloodedFrogicide",
     "maxFPS": 0,
     "minFPS": 20,
     "verticalSync": false,
@@ -45,8 +45,12 @@
       "showProgressBar": true
     },
     "authorIds": [],
-    "categories": [],
-    "playableDevices": [],
+    "categories": [
+      "shooter"
+    ],
+    "playableDevices": [
+      "keyboard"
+    ],
     "extensionProperties": [],
     "platforms": [
       {
@@ -441,19 +445,56 @@
         "metadata": "",
         "name": "Assets\\Fonts\\game.ttf",
         "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/Laser_Shoot18.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\Laser_Shoot18.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Audio/Hit_Hurt7.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\Hit_Hurt7.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/Ambience.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\Ambience.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "folded": true,
+      "name": "score",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "layouts": [
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "GameScene",
+      "name": "GameScene",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -649,8 +690,8 @@
           "name": "Spawner",
           "persistentUuid": "23a448c7-963c-4858-9bfb-dc33f73b9adb",
           "width": 0,
-          "x": -2580,
-          "y": -1314,
+          "x": -1466,
+          "y": -589,
           "zOrder": 1224,
           "numberProperties": [],
           "stringProperties": [],
@@ -664,8 +705,8 @@
           "name": "Spawner",
           "persistentUuid": "1ea9a466-00b9-4c2d-94e6-5063960dea72",
           "width": 0,
-          "x": 2546,
-          "y": -1236,
+          "x": 1673,
+          "y": -549,
           "zOrder": 1225,
           "numberProperties": [],
           "stringProperties": [],
@@ -679,8 +720,8 @@
           "name": "Spawner",
           "persistentUuid": "8faab659-7e40-483d-afb0-233976046e15",
           "width": 0,
-          "x": -2571,
-          "y": 2232,
+          "x": -1312,
+          "y": 1544,
           "zOrder": 1226,
           "numberProperties": [],
           "stringProperties": [],
@@ -694,8 +735,8 @@
           "name": "Spawner",
           "persistentUuid": "efa11d77-aca5-45e7-aa75-3771d6eeeff4",
           "width": 0,
-          "x": 2562,
-          "y": 2225,
+          "x": 1475,
+          "y": 1132,
           "zOrder": 1227,
           "numberProperties": [],
           "stringProperties": [],
@@ -712,21 +753,6 @@
           "x": 19,
           "y": 105,
           "zOrder": 1228,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 128,
-          "layer": "",
-          "name": "boss1",
-          "persistentUuid": "d8e79f6f-03f8-4345-8d88-5acff996d024",
-          "width": 127.769287109375,
-          "x": -2415,
-          "y": 1964,
-          "zOrder": 1223,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -751,12 +777,12 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "boss1",
-          "persistentUuid": "06958dd0-5a7d-4b62-bf5d-8393580acb1f",
+          "name": "Time",
+          "persistentUuid": "3cbf3a44-5961-4c3b-8517-f2c93202daaf",
           "width": 0,
-          "x": 2219,
-          "y": -1045,
-          "zOrder": 1223,
+          "x": 572,
+          "y": 357,
+          "zOrder": 1229,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2134,6 +2160,32 @@
             "align": "center",
             "wordWrap": true
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "Time",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "UIBehaviour",
+              "type": "UntitledExtension2::UIBehaviour",
+              "X": 0,
+              "Y": 0
+            }
+          ],
+          "content": {
+            "text": "0:00",
+            "opacity": 255,
+            "fontSize": 30,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": true
+          }
         }
       ],
       "events": [
@@ -2157,8 +2209,20 @@
               "parameters": [
                 "CountDown",
                 "UIBehaviour",
-                "-CameraWidth()/5",
+                "-CountDown.Width()/2",
                 "-CameraHeight()/1.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "UntitledExtension2::UIBehaviour::setpos"
+              },
+              "parameters": [
+                "Time",
+                "UIBehaviour",
+                "-Time.Width()/2",
+                "-CameraHeight()/3",
                 ""
               ]
             },
@@ -2170,6 +2234,27 @@
                 "Tadpole",
                 "+",
                 "90"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"score\""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\Ambience.wav",
+                "yes",
+                "30",
+                ""
               ]
             }
           ]
@@ -2481,7 +2566,7 @@
                 "frog",
                 "BoidsMovement",
                 "boss1",
-                "100",
+                "50",
                 "1.5",
                 ""
               ]
@@ -2494,7 +2579,7 @@
                 "frog",
                 "BoidsMovement",
                 "frog",
-                "50",
+                "10",
                 "1.5",
                 ""
               ]
@@ -2530,7 +2615,17 @@
               "parameters": [
                 "Health",
                 "=",
-                "ToString(Player.Health::Health())+\"/\"+ToString(Player.Health::MaxHealth())"
+                "ToString(round(Player.Health::Health()))+\"/\"+ToString(Player.Health::MaxHealth())"
+              ]
+            },
+            {
+              "type": {
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "Time",
+                "=",
+                "ToString(roundTo(TimerElapsedTime(\"score\"),1))"
               ]
             }
           ]
@@ -2829,6 +2924,18 @@
                 "350",
                 "0"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\Laser_Shoot18.wav",
+                "",
+                "50",
+                ""
+              ]
             }
           ]
         },
@@ -2896,6 +3003,18 @@
                 "GunR.Angle()+90",
                 "350",
                 "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\Laser_Shoot18.wav",
+                "",
+                "50",
+                ""
               ]
             }
           ]
@@ -3154,16 +3273,6 @@
                 "no",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "Health::Health::TriggerDamageCooldown"
-              },
-              "parameters": [
-                "Player",
-                "Health",
-                "1"
-              ]
             }
           ]
         },
@@ -3203,6 +3312,78 @@
               },
               "parameters": [
                 "bullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "score",
+                "=",
+                "roundTo(TimerElapsedTime(\"score\"),1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"GameOver\"",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsJustDamaged"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\Hit_Hurt7.wav",
+                "",
+                "50",
                 ""
               ]
             }
@@ -3308,10 +3489,1215 @@
           "type": "BossMovement::shootAI"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Menu",
+      "name": "Menu",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.49999999999999956,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1682,
+          "layer": "",
+          "name": "grnd",
+          "persistentUuid": "b69a2300-b62a-4de6-81af-d99bf980813b",
+          "width": 3181,
+          "x": -1063,
+          "y": -389,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 321,
+          "layer": "",
+          "name": "text",
+          "persistentUuid": "50b77ff7-aa48-4c62-a500-c87e93068a2d",
+          "width": 1070,
+          "x": 5,
+          "y": 0,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "retry",
+          "persistentUuid": "baf7255f-39be-4832-9444-2e63c7ac894e",
+          "width": 0,
+          "x": 352,
+          "y": 316,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 35,
+          "layer": "",
+          "name": "tagline",
+          "persistentUuid": "c39ba53c-90a8-49d2-8cdb-5de89e1b2401",
+          "width": 420,
+          "x": 319,
+          "y": 661,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 24.443954467773438,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "help",
+          "persistentUuid": "ea6c2a55-ba8c-40d7-9e55-962bbe376786",
+          "width": 0,
+          "x": 789.4859619140625,
+          "y": 249.13372802734375,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "text2",
+          "persistentUuid": "e5c3b88d-a73f-44e9-a102-d659e7cd16ff",
+          "width": 0,
+          "x": 499,
+          "y": 177,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "grnd",
+          "tags": "",
+          "texture": "Assets\\Art\\environment\\ground.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "name": "text",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 60,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "text2",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "retry",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "button",
+              "type": "MouseHelper::button"
+            }
+          ],
+          "content": {
+            "text": "PLAY",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "tagline",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "A boss, every 10 seconds",
+            "opacity": 255,
+            "fontSize": 25,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": true
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "help",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[b]WASD to move,\nBoth mouse buttons to shoot.[/b]",
+            "opacity": 255,
+            "fontSize": 25,
+            "visible": true,
+            "color": "223;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": true
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "NewBBText",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[b]bold[/b] [i]italic[/i] [size=15]smaller[/size] [font=times]times[/font] font\n[spacing=12]spaced out[/spacing]\n[outline=yellow]outlined[/outline] [shadow=red]DropShadow[/shadow] ",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "text",
+                "=",
+                "\"COLD BLOODED FROGICIDE\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "text",
+                "=",
+                "CameraWidth()/2 - text.Width()/2",
+                "=",
+                "CameraBorderTop()+50"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "retry",
+                "=",
+                "CameraWidth()/2 - retry.Width()/2",
+                "=",
+                "CameraBorderTop()+300"
+              ]
+            },
+            {
+              "type": {
+                "value": "LoadFile"
+              },
+              "parameters": [
+                "\"save\""
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"score\"",
+                "GlobalVariable(score)",
+                "temp"
+              ]
+            },
+            {
+              "type": {
+                "value": "UnloadFile"
+              },
+              "parameters": [
+                "\"save\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "text2",
+                "=",
+                "\"HIGHSCORE: \" + ToString(Variable(temp)) +\"s\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "text2",
+                "=",
+                "CameraWidth()/2 - text2.Width()/2",
+                "=",
+                "CameraBorderTop()+120"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "temp",
+                    "<",
+                    "GlobalVariable(score)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LoadFile"
+                  },
+                  "parameters": [
+                    "\"save\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"save\"",
+                    "\"score\"",
+                    "GlobalVariable(score)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnloadFile"
+                  },
+                  "parameters": [
+                    "\"save\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseHelper::button::isClicked"
+              },
+              "parameters": [
+                "retry",
+                "button",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"GameScene\"",
+                "yes"
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 16777215,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "button",
+          "type": "MouseHelper::button"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "GameOver",
+      "name": "GameOver",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.49999999999999956,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1682,
+          "layer": "",
+          "name": "grnd",
+          "persistentUuid": "b69a2300-b62a-4de6-81af-d99bf980813b",
+          "width": 3181,
+          "x": -1063,
+          "y": -389,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 321,
+          "layer": "",
+          "name": "text",
+          "persistentUuid": "50b77ff7-aa48-4c62-a500-c87e93068a2d",
+          "width": 1070,
+          "x": 5,
+          "y": 0,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "retry",
+          "persistentUuid": "baf7255f-39be-4832-9444-2e63c7ac894e",
+          "width": 0,
+          "x": 354,
+          "y": 316,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Menu",
+          "persistentUuid": "8788102d-73e4-4444-91b0-a233607b39b0",
+          "width": 0,
+          "x": 378,
+          "y": 424,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "grnd",
+          "tags": "",
+          "texture": "Assets\\Art\\environment\\ground.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "name": "text",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "retry",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "button",
+              "type": "MouseHelper::button"
+            }
+          ],
+          "content": {
+            "text": "RETRY",
+            "opacity": 255,
+            "fontSize": 30,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "Menu",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "button",
+              "type": "MouseHelper::button"
+            }
+          ],
+          "content": {
+            "text": "Main Menu",
+            "opacity": 255,
+            "fontSize": 30,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": false
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "NewBBText",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[b]bold[/b] [i]italic[/i] [size=15]smaller[/size] [font=times]times[/font] font\n[spacing=12]spaced out[/spacing]\n[outline=yellow]outlined[/outline] [shadow=red]DropShadow[/shadow] ",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "text",
+                "=",
+                "\"You lasted a total of \"+ ToString(GlobalVariable(score))+ \" seconds!\""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "text",
+                "=",
+                "CameraWidth()/2 - text.Width()/2",
+                "=",
+                "CameraBorderTop()+50"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "retry",
+                "=",
+                "CameraWidth()/2 - retry.Width()/2",
+                "=",
+                "CameraBorderTop()+300"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Menu",
+                "=",
+                "CameraWidth()/2 - Menu.Width()/2",
+                "=",
+                "CameraBorderTop()+375"
+              ]
+            },
+            {
+              "type": {
+                "value": "LoadFile"
+              },
+              "parameters": [
+                "\"save\""
+              ]
+            },
+            {
+              "type": {
+                "value": "LireFichierExp"
+              },
+              "parameters": [
+                "\"save\"",
+                "\"score\"",
+                "GlobalVariable(score)",
+                "temp"
+              ]
+            },
+            {
+              "type": {
+                "value": "UnloadFile"
+              },
+              "parameters": [
+                "\"save\""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "temp",
+                    "<",
+                    "GlobalVariable(score)"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "LoadFile"
+                  },
+                  "parameters": [
+                    "\"save\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "EcrireFichierExp"
+                  },
+                  "parameters": [
+                    "\"save\"",
+                    "\"score\"",
+                    "GlobalVariable(score)"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnloadFile"
+                  },
+                  "parameters": [
+                    "\"save\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseHelper::button::isClicked"
+              },
+              "parameters": [
+                "Menu",
+                "button",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Menu\"",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseHelper::button::isClicked"
+              },
+              "parameters": [
+                "retry",
+                "button",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"GameScene\"",
+                "yes"
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 16777215,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "button",
+          "type": "MouseHelper::button"
+        }
+      ]
     }
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "Lim98SE",
+      "category": "Input",
+      "description": "This extension provide two behaviors:\n\n- Turn object into cursor\nMake the object as the new cursor\n\n- Clickable button \nProvide a new condition on the object for fast checking is this one has been clicked.",
+      "extensionNamespace": "",
+      "fullName": "Mouse Helper",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30NCjwvc3R5bGU+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYsMjlMMTYsMjljLTUsMC05LTQtOS05VjljMC0zLjMsMi43LTYsNi02aDZjMy4zLDAsNiwyLjcsNiw2djExQzI1LDI1LDIxLDI5LDE2LDI5eiIvPg0KPGxpbmUgY2xhc3M9InN0MCIgeDE9IjE2IiB5MT0iMyIgeDI9IjE2IiB5Mj0iOCIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTE2LDE1TDE2LDE1Yy0xLjEsMC0yLTAuOS0yLTJ2LTNjMC0xLjEsMC45LTIsMi0yaDBjMS4xLDAsMiwwLjksMiwydjNDMTgsMTQuMSwxNy4xLDE1LDE2LDE1eiIvPg0KPC9zdmc+DQo=",
+      "name": "MouseHelper",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Computers and Hardware/Computers and Hardware_mouse_wireless.svg",
+      "shortDescription": "Check if a sprite has been clicked and turn any objects into a cursor.",
+      "version": "1.0.0",
+      "origin": {
+        "identifier": "MouseHelper",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "mouse",
+        "cursor"
+      ],
+      "authorIds": [],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "An easy way to turn any object into a mouse cursor.",
+          "fullName": "Turn sprite into cursor",
+          "name": "cursor",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "DepartScene"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CacheSouris"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "MouseX()",
+                        "=",
+                        "MouseY()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "MouseHelper::cursor",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "onActivate",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CacheSouris"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "MouseHelper::cursor",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "onDeActivate",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MontreSouris"
+                      },
+                      "parameters": [
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Object"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "MouseHelper::cursor",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": []
+        },
+        {
+          "description": "Turns any object into a button, useful to know if it has been clicked with a simple object condition.",
+          "fullName": "Clickable button ",
+          "name": "button",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Check if the object is clicked.",
+              "fullName": "Is Clicked?",
+              "functionType": "Condition",
+              "group": "",
+              "name": "isClicked",
+              "private": false,
+              "sentence": "_PARAM0_ is clicked",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MouseButtonPressed"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "MouseHelper::button",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": []
+        }
+      ]
+    },
     {
       "author": "@4ian",
       "category": "Movement",
