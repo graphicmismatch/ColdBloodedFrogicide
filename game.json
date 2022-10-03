@@ -380,6 +380,67 @@
         "name": "Assets\\Art\\frog_5s\\frog_jumping5s5.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/bullet/bullet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\bullet\\bullet.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/frog_5s - Copy/frog_jumping5s1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/frog_5s - Copy/frog_jumping5s2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/frog_5s - Copy/frog_jumping5s3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/frog_5s - Copy/frog_jumping5s4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Art/frog_5s - Copy/frog_jumping5s5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Fonts/game.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Assets\\Fonts\\game.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -411,7 +472,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.14999999999999997,
+        "zoomFactor": 0.16999999999999998,
         "windowMask": false
       },
       "objectsGroups": [
@@ -573,8 +634,8 @@
           "name": "boss1",
           "persistentUuid": "870ec07d-f057-4ba8-8377-9f7892c4d0b9",
           "width": 0,
-          "x": 556,
-          "y": 271,
+          "x": -2489,
+          "y": -1314,
           "zOrder": 1223,
           "numberProperties": [],
           "stringProperties": [],
@@ -639,6 +700,66 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Health",
+          "persistentUuid": "5b8e4d8f-4f46-47e5-876c-bdefc4beafd2",
+          "width": 0,
+          "x": 19,
+          "y": 105,
+          "zOrder": 1228,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 128,
+          "layer": "",
+          "name": "boss1",
+          "persistentUuid": "d8e79f6f-03f8-4345-8d88-5acff996d024",
+          "width": 127.769287109375,
+          "x": -2415,
+          "y": 1964,
+          "zOrder": 1223,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "boss1",
+          "persistentUuid": "224643e9-ce4d-407c-b946-b062eb809197",
+          "width": 0,
+          "x": 2308,
+          "y": 2060,
+          "zOrder": 1223,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "boss1",
+          "persistentUuid": "06958dd0-5a7d-4b62-bf5d-8393580acb1f",
+          "width": 0,
+          "x": 2219,
+          "y": -1045,
+          "zOrder": 1223,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -654,12 +775,12 @@
             {
               "name": "Health",
               "type": "Health::Health",
-              "Health": 100,
+              "Health": 50,
               "CurrentHealth": 0,
-              "MaxHealth": 100,
-              "DamageCooldown": 0,
+              "MaxHealth": 50,
+              "DamageCooldown": 0.1,
               "IsHealthJustDamaged": false,
-              "HealthRegenRate": 0.2,
+              "HealthRegenRate": 1,
               "HealthRegenDelay": 10,
               "AllowOverHealing": false,
               "HitAtLeastOnce": false,
@@ -671,7 +792,7 @@
               "BlockExcessDamage": false,
               "ShieldRegenDelay": 0,
               "IsShieldJustDamaged": false,
-              "ChanceToDodge": 0.01,
+              "ChanceToDodge": 0,
               "DamageToBeApplied": 0,
               "FlatDamageReduction": 0,
               "PercentDamageReduction": 0,
@@ -1224,7 +1345,13 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "bulletBehavious",
+              "type": "BossMovement::bulletBehaviour",
+              "despawntime": 4
+            }
+          ],
           "animations": [
             {
               "name": "NewSprite",
@@ -1236,7 +1363,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewSprite-1.png",
+                      "image": "Assets\\Art\\bullet\\bullet.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1267,6 +1394,11 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "DetectPlayer",
+              "type": "BossMovement::DetectPlayer",
+              "detectdist": 300
+            },
+            {
               "name": "FireBullet",
               "type": "FireBullet::FireBullet",
               "FireCooldown": 0,
@@ -1278,6 +1410,34 @@
               "CurrentBulletAngle": 0
             },
             {
+              "name": "Health",
+              "type": "Health::Health",
+              "Health": 10,
+              "CurrentHealth": 0,
+              "MaxHealth": 10,
+              "DamageCooldown": 0,
+              "IsHealthJustDamaged": false,
+              "HealthRegenRate": 0,
+              "HealthRegenDelay": 0,
+              "AllowOverHealing": false,
+              "HitAtLeastOnce": false,
+              "IsJustHealed": false,
+              "CurrentShieldPoints": 0,
+              "MaxShieldPoints": 0,
+              "ShieldDuration": 5,
+              "ShieldRegenRate": 0,
+              "BlockExcessDamage": false,
+              "ShieldRegenDelay": 0,
+              "IsShieldJustDamaged": false,
+              "ChanceToDodge": 0,
+              "DamageToBeApplied": 0,
+              "FlatDamageReduction": 0,
+              "PercentDamageReduction": 0,
+              "IsJustDodged": false,
+              "ShieldDamageTaken": 0,
+              "HealToBeApplied": 0
+            },
+            {
               "name": "shootAI",
               "type": "BossMovement::shootAI",
               "doshoot": false,
@@ -1285,6 +1445,35 @@
             }
           ],
           "animations": [
+            {
+              "name": "idle",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s\\frog_jumping5s1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "name": "move",
               "useMultipleDirections": false,
@@ -1375,6 +1564,158 @@
                         "name": "centre",
                         "x": 49,
                         "y": 48.5
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "frog",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "BoidsMovement",
+              "type": "BoidsMovement::BoidsMovement",
+              "MaxSpeed": 360,
+              "MaxAcceleration": 720,
+              "ShouldRotate": true,
+              "CohesionRadius": 64,
+              "AlignmentRadius": 48,
+              "SeparationRadius": 32,
+              "CohesionWeight": 1,
+              "AlignmentWeight": 1,
+              "SeparationWeight": 2,
+              "TrajectoryDistance": 0
+            },
+            {
+              "name": "Health",
+              "type": "Health::Health",
+              "Health": 3,
+              "CurrentHealth": 0,
+              "MaxHealth": 3,
+              "DamageCooldown": 0,
+              "IsHealthJustDamaged": false,
+              "HealthRegenRate": 0,
+              "HealthRegenDelay": 0,
+              "AllowOverHealing": false,
+              "HitAtLeastOnce": false,
+              "IsJustHealed": false,
+              "CurrentShieldPoints": 0,
+              "MaxShieldPoints": 0,
+              "ShieldDuration": 5,
+              "ShieldRegenRate": 0,
+              "BlockExcessDamage": false,
+              "ShieldRegenDelay": 0,
+              "IsShieldJustDamaged": false,
+              "ChanceToDodge": 0,
+              "DamageToBeApplied": 0,
+              "FlatDamageReduction": 0,
+              "PercentDamageReduction": 0,
+              "IsJustDodged": false,
+              "ShieldDamageTaken": 0,
+              "HealToBeApplied": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "move",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.10000000149011612,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Assets\\Art\\frog_5s - Copy\\frog_jumping5s5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
                       },
                       "customCollisionMask": []
                     }
@@ -1610,7 +1951,14 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "bulletBehaviour2",
+              "type": "BossMovement::bulletBehaviour2",
+              "despawntime": 5,
+              "isdespawn": false
+            }
+          ],
           "animations": [
             {
               "name": "tadpole1",
@@ -1621,7 +1969,7 @@
                   "timeBetweenFrames": 0.1429000049829483,
                   "sprites": [
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\tadpole\\tadpole1-1.png",
                       "points": [],
                       "originPoint": {
@@ -1635,10 +1983,33 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 25.132665634155273,
+                            "y": 9.877947807312012
+                          },
+                          {
+                            "x": 27.623231887817383,
+                            "y": 14.651533126831055
+                          },
+                          {
+                            "x": 25.755306243896484,
+                            "y": 19.01002311706543
+                          },
+                          {
+                            "x": 18.49115562438965,
+                            "y": 19.42511749267578
+                          },
+                          {
+                            "x": 18.90625,
+                            "y": 10.708136558532715
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\tadpole\\tadpole1-2.png",
                       "points": [],
                       "originPoint": {
@@ -1652,10 +2023,33 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 25.132665634155273,
+                            "y": 9.877947807312012
+                          },
+                          {
+                            "x": 27.623231887817383,
+                            "y": 14.651533126831055
+                          },
+                          {
+                            "x": 25.755306243896484,
+                            "y": 19.01002311706543
+                          },
+                          {
+                            "x": 18.49115562438965,
+                            "y": 19.42511749267578
+                          },
+                          {
+                            "x": 18.90625,
+                            "y": 10.708136558532715
+                          }
+                        ]
+                      ]
                     },
                     {
-                      "hasCustomCollisionMask": false,
+                      "hasCustomCollisionMask": true,
                       "image": "Assets\\Art\\tadpole\\tadpole1-3.png",
                       "points": [],
                       "originPoint": {
@@ -1669,7 +2063,30 @@
                         "x": 0,
                         "y": 0
                       },
-                      "customCollisionMask": []
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 25.132665634155273,
+                            "y": 9.877947807312012
+                          },
+                          {
+                            "x": 27.623231887817383,
+                            "y": 14.651533126831055
+                          },
+                          {
+                            "x": 25.755306243896484,
+                            "y": 19.01002311706543
+                          },
+                          {
+                            "x": 18.49115562438965,
+                            "y": 19.42511749267578
+                          },
+                          {
+                            "x": 18.90625,
+                            "y": 10.708136558532715
+                          }
+                        ]
+                      ]
                     }
                   ]
                 }
@@ -1698,6 +2115,25 @@
             }
           ],
           "animations": []
+        },
+        {
+          "assetStoreId": "",
+          "name": "Health",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "100/100",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Assets\\Fonts\\game.ttf",
+            "align": "center",
+            "wordWrap": true
+          }
         }
       ],
       "events": [
@@ -2014,6 +2450,88 @@
                 "=",
                 "2"
               ]
+            },
+            {
+              "type": {
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "boss1",
+                "Player.X()",
+                "Player.Y()",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "boss1",
+                "=",
+                "boss1.Angle()+90"
+              ]
+            },
+            {
+              "type": {
+                "value": "BoidsMovement::BoidsMovement::AvoidObject"
+              },
+              "parameters": [
+                "frog",
+                "BoidsMovement",
+                "boss1",
+                "100",
+                "1.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BoidsMovement::BoidsMovement::AvoidObject"
+              },
+              "parameters": [
+                "frog",
+                "BoidsMovement",
+                "frog",
+                "50",
+                "1.5",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BoidsMovement::BoidsMovement::MoveToObject"
+              },
+              "parameters": [
+                "frog",
+                "BoidsMovement",
+                "Player",
+                "2",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Health",
+                "=",
+                "Player.CenterX() - (Health.Width()/2)",
+                "=",
+                "Player.CenterY() +50"
+              ]
+            },
+            {
+              "type": {
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "Health",
+                "=",
+                "ToString(Player.Health::Health())+\"/\"+ToString(Player.Health::MaxHealth())"
+              ]
             }
           ]
         },
@@ -2048,7 +2566,7 @@
                 "boss1.BoundingBoxCenterX()",
                 "boss1.BoundingBoxCenterY()",
                 "Tadpole",
-                "-90",
+                "-30",
                 "200",
                 ""
               ]
@@ -2081,7 +2599,7 @@
                 "boss1.BoundingBoxCenterX()",
                 "boss1.BoundingBoxCenterY()",
                 "Tadpole",
-                "-90",
+                "-15",
                 "200",
                 ""
               ]
@@ -2114,7 +2632,7 @@
                 "boss1.BoundingBoxCenterX()",
                 "boss1.BoundingBoxCenterY()",
                 "Tadpole",
-                "-90",
+                "0",
                 "200",
                 ""
               ]
@@ -2147,7 +2665,7 @@
                 "boss1.BoundingBoxCenterX()",
                 "boss1.BoundingBoxCenterY()",
                 "Tadpole",
-                "-90",
+                "15",
                 "200",
                 ""
               ]
@@ -2160,6 +2678,88 @@
                 "Tadpole",
                 "=",
                 "boss1.ZOrder()-2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "BossMovement::DetectPlayer::isInRange"
+              },
+              "parameters": [
+                "boss1",
+                "DetectPlayer",
+                "Player",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceVers"
+              },
+              "parameters": [
+                "boss1",
+                "Player",
+                "200",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "boss1",
+                "=",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BossMovement::DetectPlayer::isInRange"
+              },
+              "parameters": [
+                "boss1",
+                "DetectPlayer",
+                "Player",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "boss1",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "Arreter"
+              },
+              "parameters": [
+                "boss1"
               ]
             }
           ]
@@ -2199,8 +2799,8 @@
               "parameters": [
                 "GunL",
                 "FireBullet",
-                "GunL.CenterX() - 5",
-                "GunL.CenterY() + 5",
+                "GunL.CenterX() ",
+                "GunL.CenterY() ",
                 "bullet",
                 "GunL.Angle()-90",
                 "350 + Player.TopDownMovement::Speed()/2",
@@ -2267,8 +2867,8 @@
               "parameters": [
                 "GunR",
                 "FireBullet",
-                "GunR.CenterX() - 5",
-                "GunR.CenterY() + 5",
+                "GunR.CenterX() ",
+                "GunR.CenterY()",
                 "bullet",
                 "GunR.Angle()-90",
                 "350 + Player.TopDownMovement::Speed()/2",
@@ -2352,6 +2952,261 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BossMovement::bulletBehaviour2::isDOne"
+              },
+              "parameters": [
+                "Tadpole",
+                "bulletBehaviour2",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "frog",
+                "Tadpole.X()",
+                "Tadpole.Y()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Tadpole",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "boss1",
+                "bullet",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "bullet",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Health::Health::Hit"
+              },
+              "parameters": [
+                "boss1",
+                "Health",
+                "1",
+                "350",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player",
+                "Tadpole",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Tadpole",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Health::Health::Hit"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                "10",
+                "350",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "boss1",
+                "Health",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "boss1",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "frog",
+                "Health",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "frog",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "frog",
+                "Player",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Health::Health::Hit"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                "1",
+                "no",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Health::Health::TriggerDamageCooldown"
+              },
+              "parameters": [
+                "Player",
+                "Health",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "frog",
+                "bullet",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Health::Health::Hit"
+              },
+              "parameters": [
+                "frog",
+                "Health",
+                "1",
+                "no",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "bullet",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -2375,10 +3230,35 @@
               "width": 0
             }
           ],
-          "effects": []
+          "effects": [
+            {
+              "effectType": "Adjustment",
+              "name": "Effect",
+              "doubleParameters": {
+                "alpha": 1,
+                "blue": 1,
+                "brightness": 1.2,
+                "contrast": 1,
+                "gamma": 1,
+                "green": 1,
+                "red": 1,
+                "saturation": 1.2
+              },
+              "stringParameters": {},
+              "booleanParameters": {}
+            }
+          ]
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "BoidsMovement",
+          "type": "BoidsMovement::BoidsMovement"
+        },
+        {
+          "name": "DetectPlayer",
+          "type": "BossMovement::DetectPlayer"
+        },
         {
           "name": "FireBullet",
           "type": "FireBullet::FireBullet"
@@ -2416,6 +3296,14 @@
           "type": "UntitledExtension2::UIBehaviour"
         },
         {
+          "name": "bulletBehaviour2",
+          "type": "BossMovement::bulletBehaviour2"
+        },
+        {
+          "name": "bulletBehavious",
+          "type": "BossMovement::bulletBehaviour"
+        },
+        {
           "name": "shootAI",
           "type": "BossMovement::shootAI"
         }
@@ -2424,6 +3312,116 @@
   ],
   "externalEvents": [],
   "eventsFunctionsExtensions": [
+    {
+      "author": "@4ian",
+      "category": "Movement",
+      "description": "Move the object linearly, according to the speed configured on X and Y axis. Useful for simple enemies, bullets or objects following a straight line on the screen.",
+      "extensionNamespace": "",
+      "fullName": "Linear Movement",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXJheS1zdGFydC1hcnJvdyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0yMywxMkwxOSwxNlYxM0g2LjgzQzYuNDIsMTQuMTcgNS4zMSwxNSA0LDE1QTMsMyAwIDAsMSAxLDEyQTMsMyAwIDAsMSA0LDlDNS4zMSw5IDYuNDIsOS44MyA2LjgzLDExSDE5VjhMMjMsMTJaIiAvPjwvc3ZnPg==",
+      "name": "LinearMovement",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/ray-start-arrow.svg",
+      "shortDescription": "Move the object linearly, according to the speed configured on X and Y axis. Useful for simple enemies, bullets or objects following a straight line on the screen.",
+      "version": "0.0.1",
+      "origin": {
+        "identifier": "LinearMovement",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "line",
+        "movement",
+        "linear"
+      ],
+      "authorIds": [
+        "wWP8BSlAW0UP4NeaHa2LcmmDzmH2"
+      ],
+      "dependencies": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Move the object linearly, according to the speed configured on X and Y axis. Useful for simple enemies, bullets or objects following a straight line on the screen.",
+          "fullName": "Linear movement",
+          "name": "LinearMovement",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AddForceXY"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Object.Behavior::PropertySpeedX()",
+                        "Object.Behavior::PropertySpeedY()",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "LinearMovement::LinearMovement",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Speed on X axis",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "SpeedX"
+            },
+            {
+              "value": "0",
+              "type": "Number",
+              "label": "Speed on Y axis",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "SpeedY"
+            }
+          ]
+        }
+      ]
+    },
     {
       "author": "",
       "category": "Game mechanic",
@@ -20801,22 +21799,70 @@
         {
           "description": "",
           "fullName": "",
-          "name": "frog",
+          "name": "DetectPlayer",
           "objectType": "",
           "eventsFunctions": [
             {
-              "description": "",
-              "fullName": "",
-              "functionType": "Action",
+              "description": "is in attack range",
+              "fullName": "is in attack range?",
+              "functionType": "Condition",
               "group": "",
-              "name": "doStepPreEvents",
+              "name": "isInRange",
               "private": false,
-              "sentence": "",
+              "sentence": "is _PARAM2_ in range of _PARAM0_",
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Player",
+                        "Object.Behavior::Propertydetectdist()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Player",
+                        "Object.Behavior::Propertydetectdist()",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ]
+                    }
+                  ]
                 }
               ],
               "parameters": [
@@ -20837,14 +21883,35 @@
                   "longDescription": "",
                   "name": "Behavior",
                   "optional": false,
-                  "supplementaryInformation": "BossMovement::frog",
+                  "supplementaryInformation": "BossMovement::DetectPlayer",
                   "type": "behavior"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Player",
+                  "longDescription": "",
+                  "name": "Player",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "objectList"
                 }
               ],
               "objectGroups": []
             }
           ],
-          "propertyDescriptors": []
+          "propertyDescriptors": [
+            {
+              "value": "10",
+              "type": "Number",
+              "label": "detectdist",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "detectdist"
+            }
+          ]
         },
         {
           "description": "",
@@ -21083,6 +22150,261 @@
               "extraInformation": [],
               "hidden": true,
               "name": "doloop"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "name": "bulletBehaviour",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "Object.Behavior::Propertydespawntime()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Object",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "BossMovement::bulletBehaviour",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "5",
+              "type": "Number",
+              "label": "despawn time",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "despawntime"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "name": "bulletBehaviour2",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "",
+              "fullName": "",
+              "functionType": "Action",
+              "group": "",
+              "name": "doStepPreEvents",
+              "private": false,
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "Object.Behavior::Propertydespawntime()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BossMovement::bulletBehaviour2::SetPropertyisdespawn"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        "yes"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "BossMovement::bulletBehaviour2",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "",
+              "fullName": "isdespawn",
+              "functionType": "Condition",
+              "group": "",
+              "name": "isDOne",
+              "private": false,
+              "sentence": "_PARAM0_ is done",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BossMovement::bulletBehaviour2::Propertyisdespawn"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "BossMovement::bulletBehaviour2::Propertyisdespawn"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Object",
+                  "longDescription": "",
+                  "name": "Object",
+                  "optional": false,
+                  "supplementaryInformation": "",
+                  "type": "object"
+                },
+                {
+                  "codeOnly": false,
+                  "defaultValue": "",
+                  "description": "Behavior",
+                  "longDescription": "",
+                  "name": "Behavior",
+                  "optional": false,
+                  "supplementaryInformation": "BossMovement::bulletBehaviour2",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "5",
+              "type": "Number",
+              "label": "despawn time",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": false,
+              "name": "despawntime"
+            },
+            {
+              "value": "",
+              "type": "Boolean",
+              "label": "isdespawn",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "isdespawn"
             }
           ]
         }
